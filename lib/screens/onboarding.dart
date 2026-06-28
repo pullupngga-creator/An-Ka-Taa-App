@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/components/dot_design.dart';
-import 'package:flutter_app/components/onboarding/onboarding_titletext.dart';
-import 'package:flutter_app/components/onboarding/onboarding_subtitletext.dart';
-import 'package:flutter_app/components/onboarding/button.dart';
+import 'package:an_ka_taa_app/components/dot_design.dart';
+import 'package:an_ka_taa_app/components/onboarding/onboarding_titletext.dart';
+import 'package:an_ka_taa_app/components/onboarding/onboarding_subtitletext.dart';
+import 'package:an_ka_taa_app/components/onboarding/button.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});

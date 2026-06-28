@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/components/home/button.dart';
-import 'package:flutter_app/style.dart';
+import 'package:an_ka_taa_app/components/home/button.dart';
+import 'package:an_ka_taa_app/style.dart';
 
 class PromotionCardText extends StatelessWidget {
   const PromotionCardText({super.key});

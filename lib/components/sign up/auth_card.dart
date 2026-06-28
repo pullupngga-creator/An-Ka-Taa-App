@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/components/sign%20in/auth_service.dart';
+import 'package:an_ka_taa_app/components/sign%20in/auth_service.dart';
 
 class AuthCard extends StatelessWidget {
   const AuthCard({super.key});

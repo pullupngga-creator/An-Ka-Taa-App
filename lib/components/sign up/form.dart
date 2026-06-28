@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/components/sign%20in/motdepassfield.dart';
+import 'package:an_ka_taa_app/components/sign up/motdepassfield.dart';
 import 'textfield.dart';
 
 class SignUpForm extends StatelessWidget {

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/Home.dart';
-import 'package:flutter_app/screens/onboarding.dart';
-import 'package:flutter_app/style.dart';
+import 'package:an_ka_taa_app/screens/Home.dart';
+import 'package:an_ka_taa_app/style.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/sign_in.dart';
+import 'package:an_ka_taa_app/screens/sign_in.dart';
 
 class OnboardingButton extends StatelessWidget {
   const OnboardingButton({super.key});

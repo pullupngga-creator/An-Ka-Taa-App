@@ -13,6 +13,13 @@ class PromotionCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: secondaryColor,
         borderRadius: BorderRadius.circular(21),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.25),
+            offset: Offset(0, 5),
+            blurRadius: 7,
+            spreadRadius: 0,
+        )]
       ),
       child: Row(
         children: [

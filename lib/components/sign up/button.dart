@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/Home.dart';
+import 'package:an_ka_taa_app/screens/Home.dart';
 
 class SignUpButton extends StatelessWidget {
   const SignUpButton({super.key});
