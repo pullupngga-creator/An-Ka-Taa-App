@@ -1,3 +1,4 @@
+import 'package:an_ka_taa_app/components/home/order_in_progress_bottom_text.dart';
 import 'package:an_ka_taa_app/components/home/order_progress_bar.dart';
 import 'package:an_ka_taa_app/style.dart';
 import 'package:flutter/material.dart';
@@ -85,11 +86,18 @@ class OrderInProgress extends StatelessWidget {
                       Image.asset("assets/images/commande_en_cours_illustration.png",
                       width: 85.0,
                       height: 85.0,
-                      )
+                      ),
                     ],
                   ),
                 ),
-                OrderProgressBar()
+                OrderProgressBar(),
+                SizedBox(height: 24,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    OrderInProgressBottomText(),
+                  ],
+                )
               ],
             ),
           ),

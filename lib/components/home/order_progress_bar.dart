@@ -17,6 +17,14 @@ class OrderProgressBar extends StatelessWidget {
               decoration: BoxDecoration(
                 color: secondaryColor,
                 borderRadius: BorderRadius.circular(100),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.25),
+                    offset: Offset(0, 5),
+                    blurRadius: 7,
+                    spreadRadius: 0,
+                  ),
+                ],
               ),
             ),
             SizedBox(width: 5.0),
@@ -26,6 +34,14 @@ class OrderProgressBar extends StatelessWidget {
               decoration: BoxDecoration(
                 color: secondaryColor,
                 borderRadius: BorderRadius.circular(5.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.25),
+                    offset: Offset(0, 5),
+                    blurRadius: 7,
+                    spreadRadius: 0,
+                  ),
+                ],
               ),
             ),
             SizedBox(width: 5.0),
@@ -35,6 +51,14 @@ class OrderProgressBar extends StatelessWidget {
               decoration: BoxDecoration(
                 color: secondaryColor,
                 borderRadius: BorderRadius.circular(100),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.25),
+                    offset: Offset(0, 5),
+                    blurRadius: 7,
+                    spreadRadius: 0,
+                  ),
+                ],
               ),
             ),
             SizedBox(width: 5.0),
@@ -44,6 +68,14 @@ class OrderProgressBar extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Color(0xFFD9D9D9),
                 borderRadius: BorderRadius.circular(5.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.25),
+                    offset: Offset(0, 5),
+                    blurRadius: 7,
+                    spreadRadius: 0,
+                  ),
+                ],
               ),
             ),
             SizedBox(width: 5.0),
@@ -53,6 +85,14 @@ class OrderProgressBar extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Color(0xFFD9D9D9),
                 borderRadius: BorderRadius.circular(100),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.25),
+                    offset: Offset(0, 5),
+                    blurRadius: 7,
+                    spreadRadius: 0,
+                  ),
+                ],
               ),
             ),
           ],
