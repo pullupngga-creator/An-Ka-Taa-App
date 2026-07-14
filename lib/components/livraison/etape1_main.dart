@@ -16,13 +16,17 @@ class Etape1Main extends StatelessWidget {
             width: 353,
             child: Row(
               children: [
-                Text("ÉTAPE 1 SUR 5", 
-                style: Theme.of(
-                  context,
-                ).textTheme.titleMedium?.copyWith(fontSize: 12, color: Color(0xFF514532)),),
+                Text(
+                  "ÉTAPE 1 SUR 5",
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontSize: 12,
+                    color: Color(0xFF514532),
+                  ),
+                ),
+                
               ],
             ),
-          )
+          ),
         ],
       ),
     );
