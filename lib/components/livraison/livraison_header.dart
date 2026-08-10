@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class LivraisonHeader extends StatelessWidget {
-  const LivraisonHeader({super.key, required this.ontap});
+  const LivraisonHeader({super.key, required this.ontap, required this.title});
   final VoidCallback ontap;
+  final String title;
   
 
   @override
@@ -21,7 +22,7 @@ class LivraisonHeader extends StatelessWidget {
             ),
             SizedBox(width: 100.0,),
             Text(
-              'Livraison',
+              title,
               style: Theme.of(
                 context,
               ).textTheme.titleMedium?.copyWith(fontSize: 18),

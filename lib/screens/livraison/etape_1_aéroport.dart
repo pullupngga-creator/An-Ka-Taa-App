@@ -1,42 +1,21 @@
-import 'package:an_ka_taa_app/components/livraison/etape1_main.dart';
 import 'package:an_ka_taa_app/components/livraison/livraison_header.dart';
 import 'package:an_ka_taa_app/screens/Home.dart';
-import 'package:an_ka_taa_app/screens/livraison/etape_1_aéroport.dart';
-import 'package:an_ka_taa_app/screens/livraison/etape_1_compagnie.dart';
+import 'package:an_ka_taa_app/screens/livraison/etape_2.dart';
+import 'package:an_ka_taa_app/components/livraison/etape1_aeroport_main.dart';
+import 'package:an_ka_taa_app/services/livraison_service.dart';
 import 'package:an_ka_taa_app/style.dart';
 import 'package:flutter/material.dart';
 
-class LivraisonEtape1 extends StatefulWidget {
-  const LivraisonEtape1({super.key});
-
-  @override
-  State<LivraisonEtape1> createState() => _LivraisonEtape1State();
-}
-
-class _LivraisonEtape1State extends State<LivraisonEtape1> {
-  String? selectedOption;
-
-  void _goToNextStep() {
-    if (selectedOption == 'aeroport') {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const Etape1Aeroport()),
-      );
-    } else if (selectedOption == 'compagnie') {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const Etape1Compagnie()),
-      );
-    }
-  }
+class Etape1Aeroport extends StatelessWidget {
+  const Etape1Aeroport({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFF4F4F4),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           LivraisonHeader(
             title: 'Livraison',
@@ -45,19 +24,22 @@ class _LivraisonEtape1State extends State<LivraisonEtape1> {
               MaterialPageRoute(builder: (context) => const Home()),
             ),
           ),
-          Etape1Main(
-            onSelectionChanged: (value) {
-              setState(() {
-                selectedOption = value;
-              });
-            },
-          ),
+          Etape1AeroportMain(),
+
         ],
       ),
       bottomNavigationBar: BottomAppBar(
         color: Colors.white,
         child: GestureDetector(
-          onTap: _goToNextStep,
+          onTap: () {
+            final selectedService = LivraisonService().selectedAirportService;
+            if (selectedService != null) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Etape2()),
+              );
+            }
+          },
           child: Container(
             width: 353,
             height: 50,

@@ -1,5 +1,5 @@
+import 'package:an_ka_taa_app/screens/onboarding.dart';
 import 'package:flutter/material.dart';
-import 'package:an_ka_taa_app/screens/Home.dart';
 import 'package:an_ka_taa_app/style.dart';
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: OnboardingScreen(),
       theme: ThemeData(
         textTheme: TextTheme(
           titleMedium: titleSemiBoldTextStyle,

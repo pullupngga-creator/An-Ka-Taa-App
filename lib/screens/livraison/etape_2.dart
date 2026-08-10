@@ -1,34 +1,12 @@
-import 'package:an_ka_taa_app/components/livraison/etape1_main.dart';
+import 'package:an_ka_taa_app/components/livraison/etape2_main.dart';
 import 'package:an_ka_taa_app/components/livraison/livraison_header.dart';
 import 'package:an_ka_taa_app/screens/Home.dart';
-import 'package:an_ka_taa_app/screens/livraison/etape_1_aéroport.dart';
-import 'package:an_ka_taa_app/screens/livraison/etape_1_compagnie.dart';
+import 'package:an_ka_taa_app/screens/livraison/etape_3.dart';
 import 'package:an_ka_taa_app/style.dart';
 import 'package:flutter/material.dart';
 
-class LivraisonEtape1 extends StatefulWidget {
-  const LivraisonEtape1({super.key});
-
-  @override
-  State<LivraisonEtape1> createState() => _LivraisonEtape1State();
-}
-
-class _LivraisonEtape1State extends State<LivraisonEtape1> {
-  String? selectedOption;
-
-  void _goToNextStep() {
-    if (selectedOption == 'aeroport') {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const Etape1Aeroport()),
-      );
-    } else if (selectedOption == 'compagnie') {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const Etape1Compagnie()),
-      );
-    }
-  }
+class Etape2 extends StatelessWidget {
+  const Etape2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,19 +23,19 @@ class _LivraisonEtape1State extends State<LivraisonEtape1> {
               MaterialPageRoute(builder: (context) => const Home()),
             ),
           ),
-          Etape1Main(
-            onSelectionChanged: (value) {
-              setState(() {
-                selectedOption = value;
-              });
-            },
-          ),
+          Expanded(child: Etape2Main()),
         ],
       ),
       bottomNavigationBar: BottomAppBar(
         color: Colors.white,
         child: GestureDetector(
-          onTap: _goToNextStep,
+          onTap: () {
+            // Navigate to the next step
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const Etape3()),
+            );
+          },
           child: Container(
             width: 353,
             height: 50,
