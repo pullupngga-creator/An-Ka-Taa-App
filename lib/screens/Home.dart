@@ -1,4 +1,5 @@
 import 'package:an_ka_taa_app/components/home/history-card.dart';
+import 'package:an_ka_taa_app/screens/D%C3%A9pot/%C3%A9tape_1.dart';
 import 'package:an_ka_taa_app/screens/livraison/etape_1.dart';
 import 'package:flutter/material.dart';
 import 'package:an_ka_taa_app/components/home/header.dart';
@@ -26,7 +27,7 @@ class Home extends StatelessWidget {
                 children: [
                   OrderCard(title: 'Livraison de Colis', imagePath: 'assets/images/livraison_illustration.png', onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const LivraisonEtape1()))),
                   const SizedBox(width: 20),
-                  OrderCard(title: 'Dépot de Colis', imagePath: 'assets/images/depot_illustration.png', onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const LivraisonEtape1()))),
+                  OrderCard(title: 'Dépot de Colis', imagePath: 'assets/images/depot_illustration.png', onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const DepotEtape1()))),
                 ],
               ),
               SizedBox(height: 21),

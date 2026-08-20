@@ -2,8 +2,8 @@ import 'package:an_ka_taa_app/screens/Home.dart';
 import 'package:an_ka_taa_app/style.dart';
 import 'package:flutter/material.dart';
 
-class Etape5Main extends StatelessWidget {
-  const Etape5Main({super.key});
+class DepotEtape6Main extends StatelessWidget {
+  const DepotEtape6Main({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +21,37 @@ class Etape5Main extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
+                  // Progress bar with checkmarks
                   Container(
                     margin: const EdgeInsets.only(top: 20.0),
                     width: double.infinity,
                     child: Row(
                       children: [
+                        Container(
+                          width: 32,
+                          height: 3,
+                          decoration: BoxDecoration(
+                            color: secondaryColor,
+                            borderRadius: BorderRadius.circular(1.5),
+                          ),
+                        ),
+                        Container(
+                          width: 32,
+                          height: 32,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Color(0xFFF9F9F9),
+                              width: 4,
+                            ),
+                            color: secondaryColor,
+                            borderRadius: BorderRadius.circular(100),
+                          ),
+                          child: const Icon(
+                            Icons.check,
+                            color: Colors.white,
+                            size: 20,
+                          ),
+                        ),
                         Container(
                           width: 32,
                           height: 3,
@@ -147,7 +173,7 @@ class Etape5Main extends StatelessWidget {
                             borderRadius: BorderRadius.circular(100),
                           ),
                           child: Text(
-                            "5",
+                            "6",
                             style: Theme.of(context).textTheme.titleMedium
                                 ?.copyWith(color: Colors.white, fontSize: 12),
                           ),
@@ -164,6 +190,7 @@ class Etape5Main extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 24.0),
+                  // Success header
                   SizedBox(
                     width: 350,
                     height: 176,
@@ -192,7 +219,7 @@ class Etape5Main extends StatelessWidget {
                         ),
                         SizedBox(height: 16.0),
                         Text(
-                          "Commande Confirmée",
+                          "Dépôt Confirmé",
                           style: Theme.of(context).textTheme.titleMedium
                               ?.copyWith(
                                 fontSize: 24,
@@ -201,7 +228,7 @@ class Etape5Main extends StatelessWidget {
                         ),
                         SizedBox(height: 2.0),
                         Text(
-                          "Votre demande de livraison a été enregistrée avec succès.",
+                          "Votre colis a été enregistré avec succès.",
                           style: Theme.of(
                             context,
                           ).textTheme.titleMedium?.copyWith(fontSize: 14),
@@ -211,6 +238,7 @@ class Etape5Main extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 24.0),
+                  // QR Code + ID card
                   Container(
                     width: 350,
                     height: 421,
@@ -231,7 +259,7 @@ class Etape5Main extends StatelessWidget {
                       children: [
                         SizedBox(height: 16.0),
                         Text(
-                          "VOTRE RÉCU FINAL",
+                          "VOTRE RECU FINAL",
                           style: Theme.of(context).textTheme.titleMedium
                               ?.copyWith(
                                 fontSize: 14,
@@ -260,13 +288,13 @@ class Etape5Main extends StatelessWidget {
                         Row(
                           children: [
                             Text(
-                              "ID de commande",
+                              "ID de depot",
                               style: Theme.of(context).textTheme.titleMedium
                                   ?.copyWith(fontSize: 16, color: Colors.black),
                             ),
                             Spacer(),
                             Text(
-                              "#ATK450",
+                              "#ATK451",
                               style: Theme.of(context).textTheme.titleMedium
                                   ?.copyWith(fontSize: 16, color: Colors.black),
                             ),
@@ -282,7 +310,7 @@ class Etape5Main extends StatelessWidget {
                             ),
                             Spacer(),
                             Text(
-                              "Livraison Agence",
+                              "Depot Agence",
                               style: Theme.of(context).textTheme.titleMedium
                                   ?.copyWith(fontSize: 16, color: Colors.black),
                             ),
@@ -292,6 +320,7 @@ class Etape5Main extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 24.0),
+                  // Détails du colis
                   Container(
                     width: 350,
                     height: 196,
@@ -319,7 +348,7 @@ class Etape5Main extends StatelessWidget {
                             ),
                             SizedBox(width: 8.0),
                             Text(
-                              "Détails du colis",
+                              "Details du colis",
                               style: Theme.of(context).textTheme.titleMedium
                                   ?.copyWith(fontSize: 16, color: Colors.black),
                             ),
@@ -356,7 +385,7 @@ class Etape5Main extends StatelessWidget {
                                       ),
                                 ),
                                 Text(
-                                  "Agence Bamako, ACI 2000",
+                                  "Bamako, Mali",
                                   style: Theme.of(context).textTheme.titleMedium
                                       ?.copyWith(
                                         fontSize: 16,
@@ -390,7 +419,7 @@ class Etape5Main extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "POIDS ESTIMÉ",
+                                  "POIDS ESTIME",
                                   style: Theme.of(context).textTheme.titleMedium
                                       ?.copyWith(
                                         fontSize: 16,
@@ -413,6 +442,7 @@ class Etape5Main extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 24.0),
+                  // Retour a l'accueil button
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -437,7 +467,7 @@ class Etape5Main extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "Retour à l'accueil",
+                                  "Retour a l'accueil",
                                   style: Theme.of(context).textTheme.titleSmall
                                       ?.copyWith(
                                         fontSize: 16,
@@ -456,6 +486,7 @@ class Etape5Main extends StatelessWidget {
                       ),
                     ),
                   ),
+                  // Partager le recu button
                   Container(
                     width: 350,
                     height: 96,
@@ -474,7 +505,7 @@ class Etape5Main extends StatelessWidget {
                             children: [
                               Icon(Icons.share, color: Colors.black, size: 20),
                               Text(
-                                "Partager le reçu",
+                                "Partager le recu",
                                 style: Theme.of(context).textTheme.titleSmall
                                     ?.copyWith(
                                       fontSize: 16,
